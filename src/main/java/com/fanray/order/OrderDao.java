@@ -5,7 +5,6 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementSetter;
 import org.springframework.stereotype.Service;
 
-import javax.sql.DataSource;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
@@ -14,7 +13,7 @@ import java.sql.SQLException;
  */
 @Service
 public class OrderDao {
-    String sql = "Insert into order ";
+    String sql = "Insert into order() ";
 
     @Autowired
     private JdbcTemplate jdbcTemplate;
