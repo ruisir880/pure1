@@ -13,7 +13,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributesModelMap;
 @Controller
 public class Order {
     @RequestMapping(value = "orderAction",method = RequestMethod.POST)
-    @ResponseBody
+    //@ResponseBody
     public String orderAction(RedirectAttributesModelMap redirect,String username,String password){
         return "success";
     }
