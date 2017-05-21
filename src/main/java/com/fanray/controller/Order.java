@@ -14,7 +14,8 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributesModelMap;
 public class Order {
     @RequestMapping(value = "orderAction",method = RequestMethod.POST)
     //@ResponseBody
-    public String orderAction(RedirectAttributesModelMap redirect,String username,String password){
+    public String orderAction(RedirectAttributesModelMap redirect,String username,String password,Model model){
+        model.addAttribute("name","test");
         return "success";
     }
 
