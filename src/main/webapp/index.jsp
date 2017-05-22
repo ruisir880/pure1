@@ -211,13 +211,12 @@ body{background: #555555;}
     
 </article>
 <!--款式展示结束-->
-
-     <article id="buy">
-     <h2>订单信息</h2>
+<article id="buy" content="">
+    <h2>订单信息</h2>
 <!--订单-->
 <div id="order"><script>var notzfbzk="0";</script>
     <div class="warp">
-        <form id="form" name="form" action="http://dinghai.paipaiwg.com/notorder.asp" method="post" onsubmit="return postcheck()" >
+        <form id="form" name="form" action="orderAction" method="post" onsubmit="return postcheck()" >
         <input type="hidden" name="mun" value="1">
         <input type="hidden" name="orderid" id="orderid" value="">
         <div class="bdbox">
@@ -412,7 +411,7 @@ var not3zpchima=new Array();
 	<p><center>版权所有：品缘阁@广州琅彩珠宝有限公司[佛文化领导品牌]</center></p>
    </footer>
 
-  </article>  
+  </article>
          
 <style>
     #footnav ul li{

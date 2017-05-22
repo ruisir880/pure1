@@ -4,280 +4,280 @@
 //function getHeight(){$("fahuo").style.height=$("forml").offsetHeight-85+"px";}  
 //window.onload = function(){getHeight();}  
 /*///////////////////////////////////////// ORDERJSFGX /////////////////////////////////////////*/
-function postcheck(){ 	
- try{
-     var product = document.getElementsByName("product");
-     if (product.length != 0){
-     var numa=0;
-     for (var i=0; i<product.length; i++){
-      if(product[i].checked) {
-      numa++;
-      }
-     }
-     if(numa==0) {
-      alert("ÇëÑ¡ÔñÒª¹ºÂòµÄÉÌÆ·»òÕßÌ×²Í");
-      return false;
-      }
-      }
- }
- catch(ex){
- }
+function postcheck(){
+    try{
+        var product = document.getElementsByName("product");
+        if (product.length != 0){
+            var numa=0;
+            for (var i=0; i<product.length; i++){
+                if(product[i].checked) {
+                    numa++;
+                }
+            }
+            if(numa==0) {
+                alert("è¯·é€‰æ‹©è¦è´­ä¹°çš„å•†å“æˆ–è€…å¥—é¤");
+                return false;
+            }
+        }
+    }
+    catch(ex){
+    }
 
- try{
-     var yanse = document.getElementsByName("yanse");
-     if (yanse.length != 0){
-     var numa=0;
-     for (var i=0; i<yanse.length; i++){
-      if(yanse[i].checked) {
-      numa++;
-      }
-     }
-     if(numa==0) {
-      alert("ÇëÑ¡ÔñÒªµÄ¹ºÂòÑÕÉ«");
-      return false;
-      }
-      }
- }
- catch(ex){
- }
+    try{
+        var yanse = document.getElementsByName("yanse");
+        if (yanse.length != 0){
+            var numa=0;
+            for (var i=0; i<yanse.length; i++){
+                if(yanse[i].checked) {
+                    numa++;
+                }
+            }
+            if(numa==0) {
+                alert("è¯·é€‰æ‹©è¦çš„è´­ä¹°é¢œè‰²");
+                return false;
+            }
+        }
+    }
+    catch(ex){
+    }
 
- try{
-     var chicun = document.getElementsByName("chicun");
-     if (chicun.length != 0){
-     var numb=0;
-     for (var i=0; i<chicun.length; i++){
-      if(chicun[i].checked) {
-      numb++;
-      }
-     }
-     if(numb==0) {
-      alert("ÇëÑ¡ÔñÒªµÄ¹ºÂò³ßÂë");
-      return false;
-      }
-      }
- }
- catch(ex){
- }
- 
- try{
-	// alert($(".zengsong").css("display"));
-     var productzp = document.getElementsByName("productzp");
-     if (productzp.length != 0 && $(".zengsong").css("display")!="none"){
-     var numa=0;
-     for (var i=0; i<productzp.length; i++){
-      if(productzp[i].checked) {
-      numa++;
-      }
-     }
-     if(numa==0) {
-      alert("ÇëÑ¡ÔñÒªµÄÔùÆ·");
-      return false;
-      }
-      }
- }
- catch(ex){
- }
+    try{
+        var chicun = document.getElementsByName("chicun");
+        if (chicun.length != 0){
+            var numb=0;
+            for (var i=0; i<chicun.length; i++){
+                if(chicun[i].checked) {
+                    numb++;
+                }
+            }
+            if(numb==0) {
+                alert("è¯·é€‰æ‹©è¦çš„è´­ä¹°å°ºç ");
+                return false;
+            }
+        }
+    }
+    catch(ex){
+    }
 
- try{
-     var yansezp = document.getElementsByName("yansezp");
-     if (yansezp.length != 0 && $(".zengsong").css("display")!="none"){
-     var numa=0;
-     for (var i=0; i<yansezp.length; i++){
-      if(yansezp[i].checked) {
-      numa++;
-      }
-     }
-     if(numa==0) {
-      alert("ÇëÑ¡ÔñÒªµÄÔùÆ·ÑÕÉ«");
-      return false;
-      }
-      }
- }
- catch(ex){
- }
+    try{
+        // alert($(".zengsong").css("display"));
+        var productzp = document.getElementsByName("productzp");
+        if (productzp.length != 0 && $(".zengsong").css("display")!="none"){
+            var numa=0;
+            for (var i=0; i<productzp.length; i++){
+                if(productzp[i].checked) {
+                    numa++;
+                }
+            }
+            if(numa==0) {
+                alert("è¯·é€‰æ‹©è¦çš„èµ å“");
+                return false;
+            }
+        }
+    }
+    catch(ex){
+    }
 
- try{
-     var chicunzp = document.getElementsByName("chicunzp");
-     if (chicunzp.length != 0 && $(".zengsong").css("display")!="none"){
-     var numb=0;
-     for (var i=0; i<chicunzp.length; i++){
-      if(chicunzp[i].checked) {
-      numb++;
-      }
-     }
-     if(numb==0) {
-      alert("ÇëÑ¡ÔñÒªµÄÔùÆ·³ßÂë");
-      return false;
-      }
-      }
- }
- catch(ex){
- }
-try{
-		if (document.form.name.value==""){
-			alert('ÇëÌîÐ´ÐÕÃû£¡');
-			document.form.name.focus();
-			return false;
-		}
-		var name = /^[\u4e00-\u9fa5]{2,6}$/;
-		if (!name.test(document.form.name.value)){
-			alert('ÐÕÃû¸ñÊ½²»ÕýÈ·£¬ÇëÖØÐÂÌîÐ´£¡');
-			document.form.name.focus();
-			return false;
-		}
+    try{
+        var yansezp = document.getElementsByName("yansezp");
+        if (yansezp.length != 0 && $(".zengsong").css("display")!="none"){
+            var numa=0;
+            for (var i=0; i<yansezp.length; i++){
+                if(yansezp[i].checked) {
+                    numa++;
+                }
+            }
+            if(numa==0) {
+                alert("è¯·é€‰æ‹©è¦çš„èµ å“é¢œè‰²");
+                return false;
+            }
+        }
+    }
+    catch(ex){
+    }
+
+    try{
+        var chicunzp = document.getElementsByName("chicunzp");
+        if (chicunzp.length != 0 && $(".zengsong").css("display")!="none"){
+            var numb=0;
+            for (var i=0; i<chicunzp.length; i++){
+                if(chicunzp[i].checked) {
+                    numb++;
+                }
+            }
+            if(numb==0) {
+                alert("è¯·é€‰æ‹©è¦çš„èµ å“å°ºç ");
+                return false;
+            }
+        }
     }
     catch(ex){
     }
     try{
-		if (document.form.mob.value==""){
-			alert('ÇëÌîÐ´ÊÖ»úºÅÂë£¡');
-			document.form.mob.focus();
-			return false;
-		}
-		var form = /^1[3,4,5,6,7,8]\d{9}$/;
-		if (!form.test(document.form.mob.value)){
-			alert('ÊÖ»úºÅÂë¸ñÊ½²»ÕýÈ·£¬ÇëÖØÐÂÌîÐ´£¡');
-			document.form.mob.focus();
-			return false;
-		}
+        if (document.form.name.value==""){
+            alert('è¯·å¡«å†™å§“åï¼');
+            document.form.name.focus();
+            return false;
+        }
+        var name = /^[\u4e00-\u9fa5]{2,6}$/;
+        if (!name.test(document.form.name.value)){
+            alert('å§“åæ ¼å¼ä¸æ­£ç¡®ï¼Œè¯·é‡æ–°å¡«å†™ï¼');
+            document.form.name.focus();
+            return false;
+        }
     }
     catch(ex){
-    } 	
+    }
     try{
-		if (document.form.province.value==""){
-			alert('ÇëÑ¡ÔñËùÔÚµØÇø£¡');
-			document.form.province.focus();
-			return false;
-		}
+        if (document.form.mob.value==""){
+            alert('è¯·å¡«å†™æ‰‹æœºå·ç ï¼');
+            document.form.mob.focus();
+            return false;
+        }
+        var form = /^1[3,4,5,6,7,8]\d{9}$/;
+        if (!form.test(document.form.mob.value)){
+            alert('æ‰‹æœºå·ç æ ¼å¼ä¸æ­£ç¡®ï¼Œè¯·é‡æ–°å¡«å†™ï¼');
+            document.form.mob.focus();
+            return false;
+        }
     }
     catch(ex){
-    } 	
+    }
     try{
-		if (document.form.address.value==""){
-			alert('ÇëÌîÐ´ÏêÏ¸µØÖ·£¡');
-			document.form.address.focus();
-			return false;
-		}
+        if (document.form.province.value==""){
+            alert('è¯·é€‰æ‹©æ‰€åœ¨åœ°åŒºï¼');
+            document.form.province.focus();
+            return false;
+        }
     }
     catch(ex){
-    } 	
-		
-	
-   // document.form.submit.disabled = true;
-   // document.form.submit.value="ÕýÔÚÌá½»£¬ÇëÉÔµÈ >>";
+    }
+    try{
+        if (document.form.address.value==""){
+            alert('è¯·å¡«å†™è¯¦ç»†åœ°å€ï¼');
+            document.form.address.focus();
+            return false;
+        }
+    }
+    catch(ex){
+    }
+
+
+    // document.form.submit.disabled = true;
+    // document.form.submit.value="æ­£åœ¨æäº¤ï¼Œè¯·ç¨ç­‰ >>";
     return true;
 }
-try{	
-new PCAS("province","city","area");
+try{
+    new PCAS("province","city","area");
 }
 catch(ex){
-} 	
-try{	
-	var thissrc = document.getElementById("yzm").src;
-	function refreshCode(){
-		document.getElementById("yzm").src=thissrc+"?"+Math.random(); 
-	}
+}
+try{
+    var thissrc = document.getElementById("yzm").src;
+    function refreshCode(){
+        document.getElementById("yzm").src=thissrc+"?"+Math.random();
+    }
 }
 catch(ex){
-} 	
+}
 /*///////////////////////////////////////// ORDERJSFGX /////////////////////////////////////////*/
 
 function lg_num(n,f)
 {
-	if(document.form.mun.value=="" || document.form.mun.value==0){	
-		var mun=1;
-	}else{
-		
-		mun=document.form.mun.value;
-	}
-	  if(f=="-")
-		mun=parseInt(mun)-n;
-	else
-		mun=parseInt(mun)+n;
-		
-		if (mun<=0) mun=1;
-	document.form.mun.value=mun;
-	
-	pricea();
+    if(document.form.mun.value=="" || document.form.mun.value==0){
+        var mun=1;
+    }else{
+
+        mun=document.form.mun.value;
+    }
+    if(f=="-")
+        mun=parseInt(mun)-n;
+    else
+        mun=parseInt(mun)+n;
+
+    if (mun<=0) mun=1;
+    document.form.mun.value=mun;
+
+    pricea();
 }
 
 function pricea(){
-	var product = $("li.mouon input[name=product]").attr("alt");
-	
-/*	for(var i=0;i<document.form.product.length;i++){
-		if(document.form.product[i].checked==true){
-			var product = document.form.product[i].alt;
-			break;
-		}
-	}*/
-	//alert(product);
-	//alert(typeof(product));
-	if(typeof(product)=="undefined"){alert('ÇëÑ¡Ôñ²úÆ· £¡');return false;};
-    if(document.form.mun.value=="" || document.form.mun.value==0){	
-		var mun=1;
-	}
-	else{
-		var mun=document.form.mun.value;
-	}	
-	var price=product*mun;
-        document.getElementById("b1").checked='checked';
-	document.form.price.value=price;
-	document.form.zfbprice.value=price;
-	//document.getElementById("showprice").innerHTML=price;
-	document.getElementById("zfbyh").innerHTML='';
+    var product = $("li.mouon input[name=product]").attr("alt");
+
+    /*	for(var i=0;i<document.form.product.length;i++){
+     if(document.form.product[i].checked==true){
+     var product = document.form.product[i].alt;
+     break;
+     }
+     }*/
+    //alert(product);
+    //alert(typeof(product));
+    if(typeof(product)=="undefined"){alert('è¯·é€‰æ‹©äº§å“ ï¼');return false;};
+    if(document.form.mun.value=="" || document.form.mun.value==0){
+        var mun=1;
+    }
+    else{
+        var mun=document.form.mun.value;
+    }
+    var price=product*mun;
+    document.getElementById("b1").checked='checked';
+    document.form.price.value=price;
+    document.form.zfbprice.value=price;
+    //document.getElementById("showprice").innerHTML=price;
+    document.getElementById("zfbyh").innerHTML='';
 }
 function priceb(){
     var cpxljg = document.getElementById("product");
-    var product = cpxljg.options[document.getElementById("product").options.selectedIndex].title; 
-    if(document.form.mun.value=="" || document.form.mun.value==0){	
-		var mun=1;
-	}
-	else{
-		var mun=document.form.mun.value;
-	}	
-	var price=product*mun;
-	document.getElementById("b1").checked='checked';
-	document.form.price.value=price;
-	document.form.zfbprice.value=price;
-	//document.getElementById("showprice").innerHTML=price;
-	document.getElementById("zfbyh").innerHTML='';
+    var product = cpxljg.options[document.getElementById("product").options.selectedIndex].title;
+    if(document.form.mun.value=="" || document.form.mun.value==0){
+        var mun=1;
+    }
+    else{
+        var mun=document.form.mun.value;
+    }
+    var price=product*mun;
+    document.getElementById("b1").checked='checked';
+    document.form.price.value=price;
+    document.form.zfbprice.value=price;
+    //document.getElementById("showprice").innerHTML=price;
+    document.getElementById("zfbyh").innerHTML='';
 }
 
-//***************************  Ö§¸¶±¦¼Û¸ñ  ***************************
+//***************************  æ”¯ä»˜å®ä»·æ ¼  ***************************
 function zfbprize(){
-         sprice=document.form.zfbprice.value;
-		// alert(sprice);
-         document.form.price.value=(sprice*notzfbzk*0.1).toFixed(0)
+    sprice=document.form.zfbprice.value;
+    // alert(sprice);
+    document.form.price.value=(sprice*notzfbzk*0.1).toFixed(0)
 }
 /*///////////////////////////////////////// ORDERJSFGX /////////////////////////////////////////*/
 function changeItem(i){
 
-if (i==1) {
+    if (i==1) {
 //document.getElementById("paydiv1").style.display = "block";
 //document.getElementById("paydiv0").style.display = "none";
-  if (notzfbzk != 0){
-     zfbprize();
-     document.getElementById("zfbyh").innerHTML='<font color=red><b><s>&nbsp;Ô­¼Û£º'+document.form.zfbprice.value+'Ôª&nbsp;</s>&nbsp;'+notzfbzk+'ÕÛ</b></font>';
-  }
-}else{
+        if (notzfbzk != 0){
+            zfbprize();
+            document.getElementById("zfbyh").innerHTML='<font color=red><b><s>&nbsp;åŽŸä»·ï¼š'+document.form.zfbprice.value+'å…ƒ&nbsp;</s>&nbsp;'+notzfbzk+'æŠ˜</b></font>';
+        }
+    }else{
 //oprize1();
 //document.getElementById("paydiv0").style.display = "block";
 //document.getElementById("paydiv1").style.display = "none";
-document.getElementById("zfbyh").innerHTML='';
-document.form.price.value=document.form.zfbprice.value;
-}
+        document.getElementById("zfbyh").innerHTML='';
+        document.form.price.value=document.form.zfbprice.value;
+    }
 }
 
 
 /*///////////////////////////////////////// ORDERJSFGX /////////////////////////////////////////*/
 var llref = '';
 if (document.referrer.length > 0){
-	llref = document.referrer;
+    llref = document.referrer;
 }
 try{
-	if (llref.length == 0 && opener.location.href.length > 0){
-    llref = opener.location.href;
-	}
+    if (llref.length == 0 && opener.location.href.length > 0){
+        llref = opener.location.href;
+    }
 }
 catch (e){}
 

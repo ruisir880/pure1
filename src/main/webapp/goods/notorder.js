@@ -1,144 +1,144 @@
 // by shy qq276559736
 
-//–¥cookie
+//ÂÜôcookie
 function setCookie(name,value,expires){
-var exp=new Date();
-exp.setTime(exp.getTime()+expires*24*60*60*1000); //ÃÏ
-document.cookie=name+"="+escape(value)+";expires="+exp.toGMTString();//+";domain=.com;path=/";
-} 
+    var exp=new Date();
+    exp.setTime(exp.getTime()+expires*24*60*60*1000); //Â§©
+    document.cookie=name+"="+escape(value)+";expires="+exp.toGMTString();//+";domain=.com;path=/";
+}
 
-//∂¡»°cookie
+//ËØªÂèñcookie
 function readcookie(name){
-var oRegex=new RegExp(name+'=([^;]+)','i');
-var oMatch=oRegex.exec(document.cookie);
-if(oMatch&&oMatch.length>1)return unescape(oMatch[1]);
-else return '';
+    var oRegex=new RegExp(name+'=([^;]+)','i');
+    var oMatch=oRegex.exec(document.cookie);
+    if(oMatch&&oMatch.length>1)return unescape(oMatch[1]);
+    else return '';
 }
 
-//ªÒ»°url÷–"?"∑˚∫Ûµƒ◊÷¥Æ
+//Ëé∑Âèñurl‰∏≠"?"Á¨¶ÂêéÁöÑÂ≠ó‰∏≤
 function GetRequest() {
-   var url = location.search; //ªÒ»°url÷–"?"∑˚∫Ûµƒ◊÷¥Æ
-   var theRequest = new Object();
-   if (url.indexOf("?") != -1) {
-      var str = url.substr(1);
-      strs = str.split("&");
-      for(var i = 0; i < strs.length; i ++) {
-         theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
-      }
-   }
-   return theRequest;
+    var url = location.search; //Ëé∑Âèñurl‰∏≠"?"Á¨¶ÂêéÁöÑÂ≠ó‰∏≤
+    var theRequest = new Object();
+    if (url.indexOf("?") != -1) {
+        var str = url.substr(1);
+        strs = str.split("&");
+        for(var i = 0; i < strs.length; i ++) {
+            theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
+        }
+    }
+    return theRequest;
 }
 
-//ªÒ»°url÷–"?"∑˚∫Ûµƒ◊÷¥Æ
+//Ëé∑Âèñurl‰∏≠"?"Á¨¶ÂêéÁöÑÂ≠ó‰∏≤
 function GetRequesta(aaa) {
-   var bbb= aaa.indexOf('?');
-   var url=aaa.substr(bbb);
-   var theRequest = new Object();
-   if (url.indexOf("?") != -1) {
-      var str = url.substr(1);
-      strs = str.split("&");
-      for(var i = 0; i < strs.length; i ++) {
-         theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
-      }
-   }
-   return theRequest;
+    var bbb= aaa.indexOf('?');
+    var url=aaa.substr(bbb);
+    var theRequest = new Object();
+    if (url.indexOf("?") != -1) {
+        var str = url.substr(1);
+        strs = str.split("&");
+        for(var i = 0; i < strs.length; i ++) {
+            theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
+        }
+    }
+    return theRequest;
 }
 
 
 //getfrom
 function getfrom() {
-var myDate = new Date();
-myDate.getYear();       //ªÒ»°µ±«∞ƒÍ∑›(2Œª)
-myDate.getFullYear();   //ªÒ»°ÕÍ’˚µƒƒÍ∑›(4Œª,1970-????)
-myDate.getMonth();      //ªÒ»°µ±«∞‘¬∑›(0-11,0¥˙±Ì1‘¬)
-myDate.getDate();       //ªÒ»°µ±«∞»’(1-31)
-myDate.getDay();        //ªÒ»°µ±«∞–«∆⁄X(0-6,0¥˙±Ì–«∆⁄ÃÏ)
-myDate.getTime();       //ªÒ»°µ±«∞ ±º‰(¥”1970.1.1ø™ ºµƒ∫¡√Î ˝)
-myDate.getHours();      //ªÒ»°µ±«∞–° ± ˝(0-23)
-myDate.getMinutes();    //ªÒ»°µ±«∞∑÷÷” ˝(0-59)
-myDate.getSeconds();    //ªÒ»°µ±«∞√Î ˝(0-59)
-var truedate = myDate.getMonth()+1;
-var not3num=""; 
-for(var i=0;i<3;i++) 
-{ 
-not3num+=Math.floor(Math.random()*10); 
-}
+    var myDate = new Date();
+    myDate.getYear();       //Ëé∑ÂèñÂΩìÂâçÂπ¥‰ªΩ(2‰Ωç)
+    myDate.getFullYear();   //Ëé∑ÂèñÂÆåÊï¥ÁöÑÂπ¥‰ªΩ(4‰Ωç,1970-????)
+    myDate.getMonth();      //Ëé∑ÂèñÂΩìÂâçÊúà‰ªΩ(0-11,0‰ª£Ë°®1Êúà)
+    myDate.getDate();       //Ëé∑ÂèñÂΩìÂâçÊó•(1-31)
+    myDate.getDay();        //Ëé∑ÂèñÂΩìÂâçÊòüÊúüX(0-6,0‰ª£Ë°®ÊòüÊúüÂ§©)
+    myDate.getTime();       //Ëé∑ÂèñÂΩìÂâçÊó∂Èó¥(‰ªé1970.1.1ÂºÄÂßãÁöÑÊØ´ÁßíÊï∞)
+    myDate.getHours();      //Ëé∑ÂèñÂΩìÂâçÂ∞èÊó∂Êï∞(0-23)
+    myDate.getMinutes();    //Ëé∑ÂèñÂΩìÂâçÂàÜÈíüÊï∞(0-59)
+    myDate.getSeconds();    //Ëé∑ÂèñÂΩìÂâçÁßíÊï∞(0-59)
+    var truedate = myDate.getMonth()+1;
+    var not3num="";
+    for(var i=0;i<3;i++)
+    {
+        not3num+=Math.floor(Math.random()*10);
+    }
 
-document.form.orderid.value='no.'+myDate.getFullYear()+truedate+myDate.getDate()+myDate.getHours()+myDate.getMinutes()+myDate.getSeconds()+not3num;
+    document.form.orderid.value='no.'+myDate.getFullYear()+truedate+myDate.getDate()+myDate.getHours()+myDate.getMinutes()+myDate.getSeconds()+not3num;
 
-var Request = new Object();
-Request = GetRequest();
-var fromurl,fromurla,nowurl,nowurla;
-fromurl = document.referrer;
-fromurla = Request['f'];
-nowurl = document.URL;
-nowurla = Request['n'];
+    var Request = new Object();
+    Request = GetRequest();
+    var fromurl,fromurla,nowurl,nowurla;
+    fromurl = document.referrer;
+    fromurla = Request['f'];
+    nowurl = document.URL;
+    nowurla = Request['n'];
 
 
-if (nowurla != null && nowurla != "") {
-nowurl=nowurla;
-}
+    if (nowurla != null && nowurla != "") {
+        nowurl=nowurla;
+    }
 
-if (fromurla != null && fromurla != "") {
-fromurl=fromurla;
-}
+    if (fromurla != null && fromurla != "") {
+        fromurl=fromurla;
+    }
 
 //alert(nowurl);
 
 
-var getstr = new Object();
-getstr = GetRequesta(nowurl);
-var gzid=getstr["gzid"];
+    var getstr = new Object();
+    getstr = GetRequesta(nowurl);
+    var gzid=getstr["gzid"];
 //alert(getstr["gzid"]);
 
-var getci=new Object();
-getci = GetRequesta(decodeURI(decodeURI(fromurl)));
+    var getci=new Object();
+    getci = GetRequesta(decodeURI(decodeURI(fromurl)));
 
 
-  if (fromurl != null && fromurl != "") {
-     setCookie("fromurl",fromurl,7)
-     document.write("<input type=hidden name=fromurl value='"+fromurl+"'>");
-  }else{
-     document.write("<input type=hidden name=fromurl value='"+readcookie("fromurl")+"'>");
-  }
+    if (fromurl != null && fromurl != "") {
+        setCookie("fromurl",fromurl,7)
+        document.write("<input type=hidden name=fromurl value='"+fromurl+"'>");
+    }else{
+        document.write("<input type=hidden name=fromurl value='"+readcookie("fromurl")+"'>");
+    }
 
-  if (nowurl != null && nowurl != "") {
-     setCookie("nowurl",nowurl,7)
-     document.write("<input type=hidden name=nowurl value='"+nowurl+"'>");
-  }else{
-     document.write("<input type=hidden name=nowurl value='"+readcookie("nowurl")+"'>");
-  }
+    if (nowurl != null && nowurl != "") {
+        setCookie("nowurl",nowurl,7)
+        document.write("<input type=hidden name=nowurl value='"+nowurl+"'>");
+    }else{
+        document.write("<input type=hidden name=nowurl value='"+readcookie("nowurl")+"'>");
+    }
 
-  if (nowurl.indexOf("notki")>0) {
-     var keyword="Õ¯√À÷˜Ã‚¥ ID:"+getstr["notki"]+"|Õ¯√À¥¥“‚ID:"+getstr["notct"]+"|Õ¯√À¿¥‘¥”Ú√˚:"+getstr["notpl"]+"|Õ¯√À¿¥‘¥πÿº¸¥ :"+getstr["notkw"];
-  }else if (fromurl.indexOf("baidu.com")>0 && fromurl.indexOf("wd=")>0  ) {
-     var keyword="∞Ÿ∂»:"+getci['wd'];
-  }else if (fromurl.indexOf("baidu.com")>0 && fromurl.indexOf("word=")>0  ) {
-     var keyword="∞Ÿ∂»:"+getci['word'];
-  }else if (fromurl.indexOf("m.baidu.com")>0 ) {
-     var keyword="∞Ÿ∂»“∆∂ØÀ—À˜";
-  }else if (fromurl.indexOf("sogou.com")>0) {
-     var keyword="À—π∑:"+getci['query'];
-  }else if (fromurl.indexOf("soso.com")>0) {
-     var keyword="SOSO:"+getci['query='];
-  }else if (fromurl.indexOf("haosou.com")>0) {
-     var keyword="360À—À˜:"+getci['q'];
-  }else{
-     var keyword="";
-  }
+    if (nowurl.indexOf("notki")>0) {
+        var keyword="ÁΩëÁõü‰∏ªÈ¢òËØçID:"+getstr["notki"]+"|ÁΩëÁõüÂàõÊÑèID:"+getstr["notct"]+"|ÁΩëÁõüÊù•Ê∫êÂüüÂêç:"+getstr["notpl"]+"|ÁΩëÁõüÊù•Ê∫êÂÖ≥ÈîÆËØç:"+getstr["notkw"];
+    }else if (fromurl.indexOf("baidu.com")>0 && fromurl.indexOf("wd=")>0  ) {
+        var keyword="ÁôæÂ∫¶:"+getci['wd'];
+    }else if (fromurl.indexOf("baidu.com")>0 && fromurl.indexOf("word=")>0  ) {
+        var keyword="ÁôæÂ∫¶:"+getci['word'];
+    }else if (fromurl.indexOf("m.baidu.com")>0 ) {
+        var keyword="ÁôæÂ∫¶ÁßªÂä®ÊêúÁ¥¢";
+    }else if (fromurl.indexOf("sogou.com")>0) {
+        var keyword="ÊêúÁãó:"+getci['query'];
+    }else if (fromurl.indexOf("soso.com")>0) {
+        var keyword="SOSO:"+getci['query='];
+    }else if (fromurl.indexOf("haosou.com")>0) {
+        var keyword="360ÊêúÁ¥¢:"+getci['q'];
+    }else{
+        var keyword="";
+    }
 
-  if (keyword != null && keyword != "") {
-     setCookie("keyword",keyword,7)
-     document.write("<input type=hidden name=keyword value='"+keyword+"'>");
-   }else{
-     document.write("<input type=hidden name=keyword value='"+readcookie("keyword")+"'>");
-  }
+    if (keyword != null && keyword != "") {
+        setCookie("keyword",keyword,7)
+        document.write("<input type=hidden name=keyword value='"+keyword+"'>");
+    }else{
+        document.write("<input type=hidden name=keyword value='"+readcookie("keyword")+"'>");
+    }
 
-  if (gzid != null && gzid != "") {
-     setCookie("gzid",gzid,7)
-     document.write("<input type=hidden name=gzid value='"+gzid+"'>");
-   }else{
-     document.write("<input type=hidden name=gzid value=''>");
-  }
+    if (gzid != null && gzid != "") {
+        setCookie("gzid",gzid,7)
+        document.write("<input type=hidden name=gzid value='"+gzid+"'>");
+    }else{
+        document.write("<input type=hidden name=gzid value=''>");
+    }
 
 }

@@ -1,57 +1,57 @@
 $(function(){
 
     //$('.item-price-timer').timeLesser( api.timeLesser );
-   // $("#address").addressSelector( !!api.input && !!api.input.address ? api.input.address : {} );
-   //// $('.comments').marqueen();
+    // $("#address").addressSelector( !!api.input && !!api.input.address ? api.input.address : {} );
+    //// $('.comments').marqueen();
     //$('.order-notes').marqueen();
 
     //
-    
-$("#olist").empty();
-//fl_zt="|0:µÈ´ıÈ·ÈÏ|1:È·ÈÏ¼Ùµ¥|2:µÈ´ı·¢»õ|3:ÒÑ¾­·¢»õ|4:ÒÑ¾­Ç©ÊÕ|5:ÒÑ¾­ÍË»õ|"
-var fl_zt= new Array();
-fl_zt[0]="µÈ´ıÈ·ÈÏ";
-fl_zt[1]="È·ÈÏ¼Ùµ¥";
-fl_zt[2]="µÈ´ı·¢»õ";
-fl_zt[3]="ÒÑ¾­·¢»õ";
-fl_zt[4]="ÒÑ¾­Ç©ÊÕ";
-fl_zt[5]="ÒÑ¾­ÍË»õ";
 
-//fl_kuaidi="|0:Î´°²ÅÅ|1:Ë³·á¿ìµİ|2:Õ¬¼±ËÍ|3:EMS|4:ÉêÍ¨¿ìµİ|5:Ô²Í¨¿ìµİ|6:ÖĞÍ¨¿ìµİ|7:ÔÏ´ï¿ìµİ|"
-var fl_kuaidi= new Array();
-fl_kuaidi[0]="Î´°²ÅÅ";
-fl_kuaidi[1]="Ë³·á¿ìµİ";
-fl_kuaidi[2]="Õ¬¼±ËÍ";
-fl_kuaidi[3]="EMS";
-fl_kuaidi[4]="ÉêÍ¨¿ìµİ";
-fl_kuaidi[5]="Ô²Í¨¿ìµİ";
-fl_kuaidi[6]="ÖĞÍ¨¿ìµİ";
-fl_kuaidi[7]="ÔÏ´ï¿ìµİ";
+    $("#olist").empty();
+//fl_zt="|0:ç­‰å¾…ç¡®è®¤|1:ç¡®è®¤å‡å•|2:ç­‰å¾…å‘è´§|3:å·²ç»å‘è´§|4:å·²ç»ç­¾æ”¶|5:å·²ç»é€€è´§|"
+    var fl_zt= new Array();
+    fl_zt[0]="ç­‰å¾…ç¡®è®¤";
+    fl_zt[1]="ç¡®è®¤å‡å•";
+    fl_zt[2]="ç­‰å¾…å‘è´§";
+    fl_zt[3]="å·²ç»å‘è´§";
+    fl_zt[4]="å·²ç»ç­¾æ”¶";
+    fl_zt[5]="å·²ç»é€€è´§";
 
-    //¶©µ¥²éÑ¯¯¢
+//fl_kuaidi="|0:æœªå®‰æ’|1:é¡ºä¸°å¿«é€’|2:å®…æ€¥é€|3:EMS|4:ç”³é€šå¿«é€’|5:åœ†é€šå¿«é€’|6:ä¸­é€šå¿«é€’|7:éŸµè¾¾å¿«é€’|"
+    var fl_kuaidi= new Array();
+    fl_kuaidi[0]="æœªå®‰æ’";
+    fl_kuaidi[1]="é¡ºä¸°å¿«é€’";
+    fl_kuaidi[2]="å®…æ€¥é€";
+    fl_kuaidi[3]="EMS";
+    fl_kuaidi[4]="ç”³é€šå¿«é€’";
+    fl_kuaidi[5]="åœ†é€šå¿«é€’";
+    fl_kuaidi[6]="ä¸­é€šå¿«é€’";
+    fl_kuaidi[7]="éŸµè¾¾å¿«é€’";
+
+    //è®¢å•æŸ¥è¯¢ï¿½
     $('#form_order_search').find('._btn_submit').on('click',function(){
-		//alert('dd');
+        //alert('dd');
         var a=$(this);
         var c = $('#form_order_search');
         var msg = c.find('.form-msg');
 
         var _d = {};
-            _d.act = 'query';
+        _d.act = 'query';
 
         var ta = c.find('input[name=mobile]');
         if(ta.val().trim()!=''){
             _d.mobile = ta.val().trim();
 
         }else{
-            alert('ÇëÊäÈëÊÖ»úºÅ');ta.focus();return false;
+            alert('è¯·è¾“å…¥æ‰‹æœºå·');ta.focus();return false;
         }
 
         $('._result').find('.warning').remove();
 
 
         //if(G.debug){
-            // console.log(_d);
-            // return false;
+        // console.log(_d);
+        // return false;
         //}
 
         $.ajax({
@@ -59,52 +59,52 @@ fl_kuaidi[7]="ÔÏ´ï¿ìµİ";
             url:'../ajax.asp',
             data:_d,
             success:function(rs){
-                
-				//alert(rs.code);
+
+                //alert(rs.code);
                 if(rs.code==0){
 
                     if(rs.data.length == 0){
-                        msg.after('<div class="warning c-h">Äã»¹Ã»ÓĞÏÂµ¥Å¶£¬<br>Èç¹ıÓĞ¼Ç´í£¬¿ÉÒÔÔÙÏÂµ¥¡£</div>');
+                        msg.after('<div class="warning c-h">ä½ è¿˜æ²¡æœ‰ä¸‹å•å“¦ï¼Œ<br>å¦‚è¿‡æœ‰è®°é”™ï¼Œå¯ä»¥å†ä¸‹å•ã€‚</div>');
                         msg.hide();
                     }else{
-						var html_d="";
+                        var html_d="";
                         for(var i in rs.data){
                             var v = rs.data[i];
-  html_d+='<li>  <div class="m30">  <div class="m20r fl"><span class="c-note">¶©&nbsp;&nbsp;µ¥&nbsp;&nbsp;ºÅ£º</span><span class="c-a">'+v.orderid+'</span></div><div class="fl "><div class="c-note fl">¶©µ¥×´Ì¬£º</div><div style="margin-left:70px;"><span class="c-a">'+fl_zt[v.zt]+'</span></div></div></div>      <div class="m30"><div class=" m20r fl"><span class="c-note">¿ìµİµ¥ºÅ£º</span><span class="c-a">'+fl_kuaidi[v.kuaidi]+'&nbsp;&nbsp;'+v.danhao+'</span></div> <div class="fl" style="margin-left:70px;"><a href="http://www.kuaidi100.com/chaxun?com='+encodeURI(fl_kuaidi[v.kuaidi])+'&nu='+v.danhao+'" target="_blank">µã»÷²é¿´ËÍµ½ÄÄ¶ùÁË£¿</a></div>   <div></li>';
-                         /*   rs.data[i]['action_view'] = '';
-                            rs.data[i]['auto_state'] = '¶©µ¥ÒÑÈ·ÈÏ£¬¼´½«·¢»õ';
+                            html_d+='<li>  <div class="m30">  <div class="m20r fl"><span class="c-note">è®¢&nbsp;&nbsp;å•&nbsp;&nbsp;å·ï¼š</span><span class="c-a">'+v.orderid+'</span></div><div class="fl "><div class="c-note fl">è®¢å•çŠ¶æ€ï¼š</div><div style="margin-left:70px;"><span class="c-a">'+fl_zt[v.zt]+'</span></div></div></div>      <div class="m30"><div class=" m20r fl"><span class="c-note">å¿«é€’å•å·ï¼š</span><span class="c-a">'+fl_kuaidi[v.kuaidi]+'&nbsp;&nbsp;'+v.danhao+'</span></div> <div class="fl" style="margin-left:70px;"><a href="http://www.kuaidi100.com/chaxun?com='+encodeURI(fl_kuaidi[v.kuaidi])+'&nu='+v.danhao+'" target="_blank">ç‚¹å‡»æŸ¥çœ‹é€åˆ°å“ªå„¿äº†ï¼Ÿ</a></div>   <div></li>';
+                            /*   rs.data[i]['action_view'] = '';
+                             rs.data[i]['auto_state'] = 'è®¢å•å·²ç¡®è®¤ï¼Œå³å°†å‘è´§';
 
-                            if(v['out_warehouse_time']>0){
-                                rs.data[i]['auto_state'] = 'ÒÑ·¢»õ£¬Çë±£³Öµç»°Í¨³©µÈ´ıËÍ»õÉÏÃÅ';
-                                if(v['out_warehouse_time']>0||1){
-                                    if(G.uat==''){
-                                        var _url = "http://www.kuaidi100.com/chaxun?com="+v['express_company']+"&nu="+v['express_code'];
-                                    }else{
-                                        var _url = "http://m.kuaidi100.com/result.jsp?nu="+v['express_code'];
-                                    }
-                                    rs.data[i]['action_view'] = '<a href="'+_url+'" target="_blank">µã»÷²é¿´ËÍµ½ÄÄ¶ùÁË£¿</a>';
-                                }
-                            }*/
+                             if(v['out_warehouse_time']>0){
+                             rs.data[i]['auto_state'] = 'å·²å‘è´§ï¼Œè¯·ä¿æŒç”µè¯é€šç•…ç­‰å¾…é€è´§ä¸Šé—¨';
+                             if(v['out_warehouse_time']>0||1){
+                             if(G.uat==''){
+                             var _url = "http://www.kuaidi100.com/chaxun?com="+v['express_company']+"&nu="+v['express_code'];
+                             }else{
+                             var _url = "http://m.kuaidi100.com/result.jsp?nu="+v['express_code'];
+                             }
+                             rs.data[i]['action_view'] = '<a href="'+_url+'" target="_blank">ç‚¹å‡»æŸ¥çœ‹é€åˆ°å“ªå„¿äº†ï¼Ÿ</a>';
+                             }
+                             }*/
 
                         }
-						msg.html(html_d);
-                       // msg.htmlRender(rs.data);
-                       // msg.html(msg.html().replaceAll('<div class=" m20r fl"><span class="c-note">¿ìµİµ¥ºÅ£º</span>&nbsp;&nbsp;</div>',''));
-                        
+                        msg.html(html_d);
+                        // msg.htmlRender(rs.data);
+                        // msg.html(msg.html().replaceAll('<div class=" m20r fl"><span class="c-note">å¿«é€’å•å·ï¼š</span>&nbsp;&nbsp;</div>',''));
+
                     }
                     c.find('._result').removeClass('undis');
 
-                    
+
                 }else{
                     alert(rs.msg);
                 }
-                
+
             },  dataType: 'json'
         });
     });
 
 
-    //Ìá½»ÆÀÂÛ®º
+    //æäº¤è¯„è®ºï¿½
     $('#form_comments').find('._btn_submit').on('click',function(){
         var a=$(this);
         if(a.hasClass('_dis')){
@@ -119,23 +119,23 @@ fl_kuaidi[7]="ÔÏ´ï¿ìµİ";
 
         ta=c.find('textarea[name=content]');
         if(ta.val().trim()!=''){
-            _d.content = ta.val().trim(); 
+            _d.content = ta.val().trim();
         }else{
-            alert('ÇëÊäÈëÆÀÂÛÄÚÈİ');ta.focus();return false;
+            alert('è¯·è¾“å…¥è¯„è®ºå†…å®¹');ta.focus();return false;
         }
 
         ta=c.find('input[name=dealcode]');
         if(ta.val().trim()!=''){
-            _d.dealcode = ta.val().trim(); 
+            _d.dealcode = ta.val().trim();
         }else{
-            alert('ÇëÊäÈë¶©µ¥ºÅ');ta.focus();return false;
+            alert('è¯·è¾“å…¥è®¢å•å·');ta.focus();return false;
         }
 
         a.addClass('_dis');
-        a.html('ÕıÔÚÌá½»£¬ÇëÉÔµÈ...');
+        a.html('æ­£åœ¨æäº¤ï¼Œè¯·ç¨ç­‰...');
 
-  
-       
+
+
         $.ajaxPost({
             ta:a,
             url:'../comment/ajax.php',
@@ -155,12 +155,12 @@ fl_kuaidi[7]="ÔÏ´ï¿ìµİ";
                         c.find('input[name=dealcode]').select();
                     }
                 }
-                
+
             }
         });
     });
 
-    
+
 
 
 

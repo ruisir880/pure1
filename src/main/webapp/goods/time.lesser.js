@@ -6,7 +6,7 @@
  * @name time.lesser.js
  * @date 2011-12-09 13:10:08
  */
- 
+
 var $__G_Time = {};
 var $__ms_Count = {};
 var $__G_Timer_Count = 0;
@@ -50,14 +50,14 @@ function showtime(id, time, msid)
 	$__ms_Count[id] = 9;
 	if (time <= 0)
 	{
-		$('#' + id).html('<span>»î¶¯ÒÑ¾­½áÊø</span>');
+		$('#' + id).html('<span>æ´»åŠ¨å·²ç»ç»“æŸ</span>');
 		return;
 	}
 	var timeUnits = {
-		'day': { 'name': 'Ìì', 'count': 86400 },
-		'hour': { 'name': 'Ğ¡Ê±', 'count': 3600 },
-		'minute': { 'name': '·Ö', 'count': 60 },
-		'second': { 'name': 'Ãë', 'count': 1 }
+		'day': { 'name': 'å¤©', 'count': 86400 },
+		'hour': { 'name': 'å°æ—¶', 'count': 3600 },
+		'minute': { 'name': 'åˆ†', 'count': 60 },
+		'second': { 'name': 'ç§’', 'count': 1 }
 	};
 	var string = '';
 	var iLess = time;
@@ -65,21 +65,21 @@ function showtime(id, time, msid)
 	{
 		var unit = timeUnits[ix];
 		/* if (iLess >= unit.count || iLess == 0)
-		{
-			*/
-			var cc = Math.floor(iLess / unit.count);
-			var ccString = cc < 10 ? '0'+cc.toString() : cc.toString();
-			string += '<span >' + ccString + '</span>' + unit.name;
-			iLess -= cc * unit.count;
+		 {
+		 */
+		var cc = Math.floor(iLess / unit.count);
+		var ccString = cc < 10 ? '0'+cc.toString() : cc.toString();
+		string += '<span >' + ccString + '</span>' + unit.name;
+		iLess -= cc * unit.count;
 		/* }
-		*/
+		 */
 	}
-/*	if ($__ms_use)
-	{
-		var msid = 'msid_'+__rand_key();
-		string += '<font id="'+msid+'">.0</font>';
-	}
-*/	$('#' + id).html(string);
+	/*	if ($__ms_use)
+	 {
+	 var msid = 'msid_'+__rand_key();
+	 string += '<font id="'+msid+'">.0</font>';
+	 }
+	 */	$('#' + id).html(string);
 	setTimeout(function(){showtime(id, time - 1, msid)}, $__ms_use ? 100 : 1000);
 }
 
