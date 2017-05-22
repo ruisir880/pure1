@@ -107,7 +107,7 @@ body{background: #555555;}
 
 	<article class="showcontent"> 
   
-<!--抢购描述-->  
+<!--抢购描述-->
 
 <h2>重要提醒</h2>
 
@@ -182,7 +182,7 @@ body{background: #555555;}
 <div class="btn">
 	<p><span style="font: 16px/24px Helvetica, Arial, san-serif; color: rgb(0, 0, 0); text-transform: none; text-indent: 0px; letter-spacing: normal; word-spacing: 0px; float: none; display: inline !important; white-space: normal; font-size-adjust: none; font-stretch: normal; background-color: rgb(249, 249, 249); -webkit-text-stroke-width: 0px;"></span></p>
 
-<a class="btn" onclick="online()" href="wechat:lphonebull"  style="background-position: 10% 50%;background-size: 32px 32px;background-repeat: no-repeat;background-color: #ff5600;display: block;width: 100%;margin: 5px 0;text-align: center;color: #fff;text-shadow: 1px 1px 1px #333;border-radius: 6px;">微信咨询：lphonebull</a> 
+<a class="btn" onclick="online()" href="wechat:lphonebull"  style="background-position: 10% 50%;background-size: 32px 32px;background-repeat: no-repeat;background-color: #ff5600;display: block;width: 100%;margin: 5px 0;text-align: center;color: #fff;text-shadow: 1px 1px 1px #333;border-radius: 6px;">微信咨询：lphonebull</a>
 
 <a class="btn" href="http://wpa.qq.com/msgrd?v=3&uin=13698877&site=qq&menu=yes" style="background-position: 10% 50%;background-size: 32px 32px;background-repeat: no-repeat;background-color: #ff5600;display: block;width: 100%;margin: 5px 0;text-align: center;color: #fff;text-shadow: 1px 1px 1px #333;border-radius: 6px;">QQ咨询：13698877</a>
 
@@ -192,7 +192,7 @@ body{background: #555555;}
 
   
 				
-<!--款式展示-->	   
+<!--款式展示-->
 <article class="kuanshi">
 	
 	<h2>招财进宝十帝钱与化太岁锦囊简介</h2>
