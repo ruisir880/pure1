@@ -65,7 +65,7 @@
         <init-param>
             <!-- 编码设置 -->
             <param-name>encoding</param-name>
-            <param-value>gb2312</param-value>
+            <param-value>utf-8</param-value>
         </init-param>
         <init-param>
             <param-name>forceEncoding</param-name>

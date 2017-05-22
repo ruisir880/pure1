@@ -22,9 +22,12 @@
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <!-- 这里的配置我的理解是自动给后面action的方法return的字符串加上前缀和后缀，变成一个 可用的url地址 -->
         <!--把页面放在WEB-INF下面，防止被直接访问-->
-        <property name="prefix" value="/WEB-INF/" />
-        <property name="order" value="10"></property>
-        <property name="contentType" value="text/html"></property>
+        <!--<property name="prefix" value="/" />-->
+        <!--<property name="order" value="10"></property>-->
+        <!--<property name="contentType" value="text/html"></property>-->
+        <!--<property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>-->
+        <property name="prefix" value="/" />
+        <property name="suffix" value=".jsp" />
         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
     </bean>
 </beans>

@@ -24,4 +24,10 @@ public class Order {
         return "index";
     }
 
+    @RequestMapping(value = "tosuccess",method = RequestMethod.GET,produces="text/html;charset=UTF-8")
+    public String tosuccess(Model model){
+        model.addAttribute("name","testName");
+        model.addAttribute("address", "安徽是的佳得乐");
+        return "success";
+    }
 }

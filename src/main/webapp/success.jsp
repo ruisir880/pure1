@@ -15,39 +15,17 @@
 
 <body>
 <div class="okDiv">
-<span id="jdt">
-<section class="container">
-<div class="progress"><span class="orange" style="width:0%;"><span>0%</span></span> </div>
-</section>
-</span>
-    <script type='text/javascript'>
-        function loading(percent){
-            $('.progress span').animate({width:percent},1000,function(){
-                $(this).children().html(percent);
-                if(percent=='100%'){
-                    $(this).children().html('订单已经处理成功&nbsp;&nbsp;&nbsp;&nbsp;');
-                    $('.container').fadeOut();
-                    document.getElementById("jdt").style.display='none';
-                    document.getElementById("t0").style.display='none';
-                    document.getElementById("t1").style.display='block';
-                    document.getElementById("t2").style.display='block';
-                }
-            })
-        }
-    </script>
-    <script type="text/javascript">loading('20%');</script>
     <div class="top">
         <div class="chenggong">
-            <div id="t0">订单处理中，请耐心等待……</div>
-            <div id="t1" style="display:none">恭喜<span style="color:#FF8000;">${user}</span>，提交成功!!</div>
-            <div id="t2" style="display:none">我们将马上安排发货，很快将可以送到你的手上。祝您生活愉快！</div>
+            <div id="t1" >恭喜<span style="color:#FF8000;">${name}</span>，提交成功!!</div>
+            <div id="t2" >我们将马上安排发货，很快将可以送到你的手上。祝您生活愉快！</div>
         </div>
     </div>
     <div class="content">
         <!-- 返回订单信息 -->
         <script type="text/javascript">loading('40%');</script>
         订单号：no.201752122954484<br />
-        姓名：钱风<br />
+        姓名：${name}<br />
         电话：15365458972<br />
         产品：生肖金镶玉178元、子鼠 <font color='red'>(  赠品：国家宝石检测证书+开光证书+十帝钱+2017化太岁锦囊+礼品包装袋+礼品盒+精美挂绳 )</font><br />
 
@@ -55,7 +33,7 @@
         <img src="images/payb.gif" border=0>
         <br />
 
-        地址：湖北省黄石市市辖区阿来得及法律的<br />
+        地址：${address}<br />
     </div>
     <div class="bottom">
         <!-- 返回支付方式 -->
