@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.springframework.web.servlet.support.RequestContextUtils;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.ArrayList;
@@ -21,12 +22,13 @@ public class Order {
     @RequestMapping(value = "orderAction",method = RequestMethod.POST)
     //@ResponseBody
     public String orderAction(RedirectAttributes attributes,String product,String yanse,String name,String mob,String province,String city,String area,String address){
-        attributes.addAttribute("product",product);
-        attributes.addAttribute("yanse", yanse);
-        attributes.addAttribute("name", name);
-        attributes.addAttribute("mob", mob);
+        Map paramMap = new HashMap();
+        attributes.addFlashAttribute("product",product);
+        attributes.addFlashAttribute("style", yanse);
+        attributes.addFlashAttribute("name", name);
+        attributes.addFlashAttribute("tel", mob);
         String addr = province+","+city+","+area+","+address;
-        attributes.addAttribute("address",addr);
+        attributes.addFlashAttribute("address",addr);
         return "redirect:/tosuccess";
     }
 
@@ -34,23 +36,26 @@ public class Order {
     public String queryOrder(Model model){
         List<OrderInfo> orderInfoList = new ArrayList<OrderInfo>();
         OrderInfo orderInfo = new OrderInfo();
-        orderInfo.setAddress("????");
+        orderInfo.setAddress("啊的链接");
         orderInfo.setName("testName");
         orderInfo.setTel("testTel");
         orderInfoList.add(orderInfo);
         model.addAttribute("orderInfo", orderInfoList);
-        model.addAttribute("test", "????");
+        model.addAttribute("test", "吐舌头");
         return "orderList";
     }
 
     @RequestMapping(value = "tosuccess",method = RequestMethod.GET,produces="text/html;charset=UTF-8")
     public String tosuccess(HttpServletRequest request,Model model){
-       // Map<String,?> map = RequestContextUtils.getInputFlashMap(request);
-//        Map<String, String> map = new HashMap<String, String>();
-//        map.put("name","???");
-//        model.addAllAttributes(map);
-        model.addAttribute("name","???");
+        //model.addAllAttributes( request.getParameterMap());
+        Map<String,?> map = RequestContextUtils.getInputFlashMap(request);
+        model.addAllAttributes(map);
         return "success";
+    }
+
+    @RequestMapping(value = "indexAction",method = RequestMethod.GET)
+    public String index(){
+        return "index";
     }
 
 

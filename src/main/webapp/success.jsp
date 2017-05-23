@@ -27,7 +27,7 @@
         订单号：no.${orderno}<br />
         姓名：${name}<br />
         电话：${tel}<br />
-        产品：${ordername} <font color='red'>(  赠品：国家宝石检测证书+开光证书+十帝钱+2017化太岁锦囊+礼品包装袋+礼品盒+精美挂绳 )</font><br />
+        产品：${product} <font color='red'>(  赠品：国家宝石检测证书+开光证书+十帝钱+2017化太岁锦囊+礼品包装袋+礼品盒+精美挂绳 )</font><br />
 
         付款方式：
         <img src="images/payb.gif" border=0>
@@ -41,7 +41,7 @@
 
         <div class="btnDiv">
 
-            <a href="http://dinghai.paipaiwg.com/index.htm?from=singlemessage"><img src="images/btn5.gif" alt=""  border=0/></a>
+            <a href="indexAction"><img src="images/btn5.gif" alt=""  border=0/></a>
 
         </div>
         <script>document.title="您的订单已经提交成功，感谢你的支持！";</script>
