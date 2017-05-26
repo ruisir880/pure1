@@ -1,6 +1,7 @@
 package com.fanray.dto;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  * Created by Ray Rui on 5/23/2017.
@@ -17,6 +18,8 @@ public class OrderInfo implements Serializable{
     private String address;
 
     private String delNo;
+
+    private Date buyDate;
 
     public String getProduct() {
         return product;
@@ -64,5 +67,13 @@ public class OrderInfo implements Serializable{
 
     public void setDelNo(String delNo) {
         this.delNo = delNo;
+    }
+
+    public Date getBuyDate() {
+        return buyDate;
+    }
+
+    public void setBuyDate(Date buyDate) {
+        this.buyDate = buyDate;
     }
 }
